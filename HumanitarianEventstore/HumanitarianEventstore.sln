@@ -1,13 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Humanitarian.Eventstore", "HumanitarianEventstore\Humanitarian.Eventstore.sqlproj", "{62E5174B-0386-4F6B-AB89-86B1717C270F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Humanitarian.PublicationServices", "HumanitarianPublicationServices\Humanitarian.PublicationServices.csproj", "{3CF4AD39-A803-4B54-8534-25AE0275A5CF}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Humanitarian.ClientServices", "HumanitarianClientServices\Humanitarian.ClientServices.csproj", "{FAD9115C-EBCC-48AE-8241-7587BE182489}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hosts", "Hosts", "{0E743E40-7F8F-4C06-9772-295D547C824C}"
 EndProject
@@ -25,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Humanitarian.Publication.Un
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Humanitarian.Publication.Integration.Test", "Humanitarian.Publication.Integration.Test\Humanitarian.Publication.Integration.Test.csproj", "{5FD079CE-F656-4BBE-8FBD-2F17B1C62FCB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Humanitarian.WebAPI", "Humanitarian.WebAPI\Humanitarian.WebAPI.csproj", "{90DC3FDB-0811-4B1D-A7A9-D60C68186C24}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,14 +35,6 @@ Global
 		{62E5174B-0386-4F6B-AB89-86B1717C270F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62E5174B-0386-4F6B-AB89-86B1717C270F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{62E5174B-0386-4F6B-AB89-86B1717C270F}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{3CF4AD39-A803-4B54-8534-25AE0275A5CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3CF4AD39-A803-4B54-8534-25AE0275A5CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3CF4AD39-A803-4B54-8534-25AE0275A5CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3CF4AD39-A803-4B54-8534-25AE0275A5CF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FAD9115C-EBCC-48AE-8241-7587BE182489}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FAD9115C-EBCC-48AE-8241-7587BE182489}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FAD9115C-EBCC-48AE-8241-7587BE182489}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FAD9115C-EBCC-48AE-8241-7587BE182489}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AE82831B-DE9F-4962-8BA6-A5A92F0C0194}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AE82831B-DE9F-4962-8BA6-A5A92F0C0194}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE82831B-DE9F-4962-8BA6-A5A92F0C0194}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -61,17 +51,20 @@ Global
 		{5FD079CE-F656-4BBE-8FBD-2F17B1C62FCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5FD079CE-F656-4BBE-8FBD-2F17B1C62FCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5FD079CE-F656-4BBE-8FBD-2F17B1C62FCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90DC3FDB-0811-4B1D-A7A9-D60C68186C24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90DC3FDB-0811-4B1D-A7A9-D60C68186C24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90DC3FDB-0811-4B1D-A7A9-D60C68186C24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90DC3FDB-0811-4B1D-A7A9-D60C68186C24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{62E5174B-0386-4F6B-AB89-86B1717C270F} = {0559D478-963E-4665-8D19-878626EB6572}
-		{3CF4AD39-A803-4B54-8534-25AE0275A5CF} = {0E743E40-7F8F-4C06-9772-295D547C824C}
-		{FAD9115C-EBCC-48AE-8241-7587BE182489} = {0E743E40-7F8F-4C06-9772-295D547C824C}
 		{AE82831B-DE9F-4962-8BA6-A5A92F0C0194} = {9C2D521B-9D2D-4AF9-82FC-BEAECF96E931}
 		{7533594E-67C8-4E7E-AE1B-8F6026D16D0D} = {9C2D521B-9D2D-4AF9-82FC-BEAECF96E931}
 		{9E75681A-9ABE-4D3A-AA20-2D5D709E7479} = {9C2D521B-9D2D-4AF9-82FC-BEAECF96E931}
 		{5FD079CE-F656-4BBE-8FBD-2F17B1C62FCB} = {9C2D521B-9D2D-4AF9-82FC-BEAECF96E931}
+		{90DC3FDB-0811-4B1D-A7A9-D60C68186C24} = {0E743E40-7F8F-4C06-9772-295D547C824C}
 	EndGlobalSection
 EndGlobal
