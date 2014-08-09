@@ -13,15 +13,22 @@ namespace Humanitarian.DataContracts
     [DataContract]
     public class HumanitarianEvent
     {
+        private XElement eventXml;
+        private XElement propertyXml;
+
         public HumanitarianEvent()
         {
 
-        }
-
-        private XElement eventXml;
+        }      
 
         [DataMember]
         public XElement EventXml
+        {
+            get { return eventXml; }
+            set { eventXml = value; }
+        }
+        [DataMember]
+        public XElement PropertyXml
         {
             get { return eventXml; }
             set { eventXml = value; }

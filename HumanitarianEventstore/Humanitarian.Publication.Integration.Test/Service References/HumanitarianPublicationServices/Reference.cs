@@ -99,6 +99,9 @@ namespace Humanitarian.Publication.Integration.Test.HumanitarianPublicationServi
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Xml.Linq.XElement EventXmlField;
         
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Xml.Linq.XElement PropertyXmlField;
+        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -118,6 +121,19 @@ namespace Humanitarian.Publication.Integration.Test.HumanitarianPublicationServi
                 if ((object.ReferenceEquals(this.EventXmlField, value) != true)) {
                     this.EventXmlField = value;
                     this.RaisePropertyChanged("EventXml");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Xml.Linq.XElement PropertyXml {
+            get {
+                return this.PropertyXmlField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PropertyXmlField, value) != true)) {
+                    this.PropertyXmlField = value;
+                    this.RaisePropertyChanged("PropertyXml");
                 }
             }
         }

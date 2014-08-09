@@ -18,7 +18,9 @@ namespace Humanitarian.Publication.Integration.Test
                 client.AddHumanitarianEvent(new HumanitarianPublicationServices.AddHumanitarianEventRequest() 
                 { 
                     EventToAdd = new HumanitarianPublicationServices.HumanitarianEvent() 
-                        { EventXml = XElement.Parse("")
+                        { EventXml = XElement.Parse(""),
+                        PropertyXml = XElement.Parse("")
+                        
                         } 
                 });
             }            
