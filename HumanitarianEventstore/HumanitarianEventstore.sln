@@ -40,6 +40,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HumanitarianWebAPI", "Human
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Humanitarian.PublicationServices", "Humanitarian.PublicationServices\Humanitarian.PublicationServices.csproj", "{C04E0F64-104B-4F55-A7FB-BD6BF64E5A1D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Docs", "_Docs", "{EF92CE66-BCBC-457A-AAF6-58EDE9A815C2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
