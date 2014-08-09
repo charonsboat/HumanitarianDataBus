@@ -4,11 +4,12 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Humanitarian.Publication.Integration.Test
 {
     [TestClass]
-    public class UnitTest1
+    public class PublicationTests
     {
         [TestMethod]
-        public void TestMethod1()
+        public void AddNewEvent()
         {
+
         }
     }
 }

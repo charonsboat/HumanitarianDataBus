@@ -18,6 +18,9 @@ namespace Humanitarian.PublicationServices
         [OperationContract]
         GetHumanitarianEventResponse GetHumanitarianEvents(GetHumanitarianEventRequest request);
 
+        [OperationContract]
+        AddHumanitarianEventResponse AddHumanitarianEvent(AddHumanitarianEventRequest request);
+
     }
     
 }

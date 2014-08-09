@@ -18,7 +18,11 @@ namespace Humanitarian.PublicationServices
         public GetHumanitarianEventResponse GetHumanitarianEvents(GetHumanitarianEventRequest request)
         {
             return new GetHumanitarianEventResponse { Events = new List<HumanitarianEvent>() };
+        }
 
+        public AddHumanitarianEventResponse AddHumanitarianEvent(AddHumanitarianEventRequest request)
+        {
+            return new AddHumanitarianEventResponse();
         }
 
     }
