@@ -6,3 +6,7 @@
     [LastModifiedDateTime] DATETIME NULL, 
     [LastModifiedUser] VARCHAR(64) NULL
 )
+
+GO
+
+CREATE INDEX [IX_EventXml] ON [dbo].[Events] ([EventXml])
