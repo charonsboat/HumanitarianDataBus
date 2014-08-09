@@ -97,10 +97,13 @@ namespace Humanitarian.Publication.Integration.Test.HumanitarianPublicationServi
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Xml.Linq.XElement EventXmlField;
+        private string EventXmlField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Xml.Linq.XElement PropertyXmlField;
+        private System.Guid IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PropertyXmlField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -113,7 +116,7 @@ namespace Humanitarian.Publication.Integration.Test.HumanitarianPublicationServi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Xml.Linq.XElement EventXml {
+        public string EventXml {
             get {
                 return this.EventXmlField;
             }
@@ -126,7 +129,20 @@ namespace Humanitarian.Publication.Integration.Test.HumanitarianPublicationServi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Xml.Linq.XElement PropertyXml {
+        public System.Guid Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PropertyXml {
             get {
                 return this.PropertyXmlField;
             }

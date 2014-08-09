@@ -1,6 +1,7 @@
 ﻿using Humanitarian.DataContracts;
 using Humanitarian.DataContracts.Requests;
 using Humanitarian.DataContracts.Responses;
+using Humanitarian.DataAccess;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +23,10 @@ namespace Humanitarian.PublicationServices
 
         public AddHumanitarianEventResponse AddHumanitarianEvent(AddHumanitarianEventRequest request)
         {
-            return new AddHumanitarianEventResponse();
+            AddHumanitarianEventResponse response = new AddHumanitarianEventResponse();
+            var dao = new HumanitarianDao();
+            dao.AddHumanitarianEvent(request);
+            return response;            
         }
 
     }
