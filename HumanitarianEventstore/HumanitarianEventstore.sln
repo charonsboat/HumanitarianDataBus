@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Humanitarian.Common", "Huma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Humanitarian.DataAccess", "Humanitarian.DataAccess\Humanitarian.DataAccess.csproj", "{BA2C58AC-8555-4F0A-8762-FC56AE0E5649}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Humanitarian.DataContracts", "Humanitarian.DataContracts\Humanitarian.DataContracts.csproj", "{09E492BA-7418-416B-A1C9-F1DAE074C0F5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,6 +87,10 @@ Global
 		{BA2C58AC-8555-4F0A-8762-FC56AE0E5649}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA2C58AC-8555-4F0A-8762-FC56AE0E5649}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA2C58AC-8555-4F0A-8762-FC56AE0E5649}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09E492BA-7418-416B-A1C9-F1DAE074C0F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09E492BA-7418-416B-A1C9-F1DAE074C0F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09E492BA-7418-416B-A1C9-F1DAE074C0F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09E492BA-7418-416B-A1C9-F1DAE074C0F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -101,5 +107,6 @@ Global
 		{EC913D2B-5D3D-4AF0-AC96-E137B770F128} = {F9800B99-E804-4F6E-8D62-F159C84985B4}
 		{193C95EE-211D-4479-99D1-CD298A5EF92A} = {F9800B99-E804-4F6E-8D62-F159C84985B4}
 		{BA2C58AC-8555-4F0A-8762-FC56AE0E5649} = {F9800B99-E804-4F6E-8D62-F159C84985B4}
+		{09E492BA-7418-416B-A1C9-F1DAE074C0F5} = {F9800B99-E804-4F6E-8D62-F159C84985B4}
 	EndGlobalSection
 EndGlobal

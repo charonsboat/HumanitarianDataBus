@@ -9,4 +9,3 @@
 
 GO
 
-CREATE INDEX [IX_EventXml] ON [dbo].[Events] ([EventXml])
