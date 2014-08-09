@@ -43,10 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contracts\Event.cs" />
+    <Compile Include="Contracts\HumanitarianEvent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Requests\GetEventRequest.cs" />
-    <Compile Include="Responses\GetEventResponse.cs" />
+    <Compile Include="Requests\GetHumanitarianEventRequest.cs" />
+    <Compile Include="Responses\GetHumanitarianEventResponse.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

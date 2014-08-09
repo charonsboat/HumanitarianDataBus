@@ -5,11 +5,12 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Humanitarian.DataContracts.Requests
+namespace Humanitarian.DataContracts.Responses
 {
     [DataContract]
-    public class GetEventRequest
+    public class GetHumanitarianEventResponse
     {
-
+        [DataMember]
+        public List<HumanitarianEvent> Events { get; set; }
     }
 }
