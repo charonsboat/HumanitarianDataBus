@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Humanitarian.Eventstore", "HumanitarianEventstore\Humanitarian.Eventstore.sqlproj", "{62E5174B-0386-4F6B-AB89-86B1717C270F}"
 EndProject
@@ -34,6 +34,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Humanitarian.ClientServices", "Humanitarian.ClientServices\Humanitarian.ClientServices.csproj", "{E63E06FE-F80E-42C0-B7CE-C6CF64A1514F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Humanitarian.PublicationServices", "Humanitarian.PublicationServices\Humanitarian.PublicationServices.csproj", "{19D2AB67-068C-438A-8F87-056F6A6896F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HumanitarianWebAPI", "HumanitarianWebAPI\HumanitarianWebAPI.csproj", "{EB9BB5B5-33FE-4C70-9A12-A22B742CBF5F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -91,6 +93,10 @@ Global
 		{19D2AB67-068C-438A-8F87-056F6A6896F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19D2AB67-068C-438A-8F87-056F6A6896F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19D2AB67-068C-438A-8F87-056F6A6896F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB9BB5B5-33FE-4C70-9A12-A22B742CBF5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB9BB5B5-33FE-4C70-9A12-A22B742CBF5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB9BB5B5-33FE-4C70-9A12-A22B742CBF5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB9BB5B5-33FE-4C70-9A12-A22B742CBF5F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -108,5 +114,6 @@ Global
 		{09E492BA-7418-416B-A1C9-F1DAE074C0F5} = {F9800B99-E804-4F6E-8D62-F159C84985B4}
 		{E63E06FE-F80E-42C0-B7CE-C6CF64A1514F} = {0E743E40-7F8F-4C06-9772-295D547C824C}
 		{19D2AB67-068C-438A-8F87-056F6A6896F1} = {0E743E40-7F8F-4C06-9772-295D547C824C}
+		{EB9BB5B5-33FE-4C70-9A12-A22B742CBF5F} = {0E743E40-7F8F-4C06-9772-295D547C824C}
 	EndGlobalSection
 EndGlobal
