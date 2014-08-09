@@ -1,5 +1,6 @@
 ﻿using Humanitarian.DataContracts;
 using Humanitarian.DataContracts.Requests;
+using Humanitarian.DataContracts.Responses;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,9 +15,10 @@ namespace Humanitarian.PublicationServices
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class HumanitarianPublicationServices : IHumanitarianPublicationServices
     {
-        public HumanitarianEvent GetHumanitarianEvents(GetHumanitarianEventRequest request)
+        public GetHumanitarianEventResponse GetHumanitarianEvents(GetHumanitarianEventRequest request)
         {
-            return new HumanitarianEvent();
+            return new GetHumanitarianEventResponse { Events = new List<HumanitarianEvent>() };
+
         }
 
     }

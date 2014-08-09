@@ -1,5 +1,6 @@
 ﻿using Humanitarian.DataContracts;
 using Humanitarian.DataContracts.Requests;
+using Humanitarian.DataContracts.Responses;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,7 @@ namespace Humanitarian.PublicationServices
     public interface IHumanitarianPublicationServices
     {
         [OperationContract]
-        HumanitarianEvent GetHumanitarianEvents(GetHumanitarianEventRequest request);
+        GetHumanitarianEventResponse GetHumanitarianEvents(GetHumanitarianEventRequest request);
 
     }
     
