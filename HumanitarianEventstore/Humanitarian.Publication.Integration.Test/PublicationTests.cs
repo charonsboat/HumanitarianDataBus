@@ -32,7 +32,8 @@ namespace Humanitarian.Publication.Integration.Test
             var humEvents = new List<HumanitarianPublicationServices.HumanitarianEvent>();
             using (var client = new HumanitarianPublicationServices.HumanitarianPublicationServicesClient())
             {
-                client.GetHumanitarianEvents(new HumanitarianPublicationServices.GetHumanitarianEventRequest());
+              var response =  client.GetHumanitarianEvents(new HumanitarianPublicationServices.GetHumanitarianEventRequest());
+              humEvents = response.Events;
             }
             Assert.IsTrue(humEvents.Any());
         }

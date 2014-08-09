@@ -17,8 +17,9 @@ namespace Humanitarian.PublicationServices
     public class HumanitarianPublicationServices : IHumanitarianPublicationServices
     {
         public GetHumanitarianEventResponse GetHumanitarianEvents(GetHumanitarianEventRequest request)
-        {
-            return new GetHumanitarianEventResponse { Events = new List<HumanitarianEvent>() };
+        {   
+            var dao = new HumanitarianDao();
+            return dao.GetHumanitarianEvents(request);
         }
 
         public AddHumanitarianEventResponse AddHumanitarianEvent(AddHumanitarianEventRequest request)
