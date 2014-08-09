@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Humanitarian.DataContracts.Responses" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Humanitarian.DataContracts.Responses" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:54914/HumanitarianPublicationServices.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Humanitarian.DataContracts" />
+  <xs:complexType name="GetHumanitarianEventResponse">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Humanitarian.DataContracts" minOccurs="0" name="Events" nillable="true" type="q1:ArrayOfHumanitarianEvent" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetHumanitarianEventResponse" nillable="true" type="tns:GetHumanitarianEventResponse" />
+  <xs:complexType name="AddHumanitarianEventResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="AddHumanitarianEventResponse" nillable="true" type="tns:AddHumanitarianEventResponse" />
+</xs:schema>
