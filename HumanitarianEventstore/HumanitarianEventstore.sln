@@ -5,6 +5,10 @@ VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "HumanitarianEventstore", "HumanitarianEventstore\HumanitarianEventstore.sqlproj", "{62E5174B-0386-4F6B-AB89-86B1717C270F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HumanitarianPublicationServices", "HumanitarianPublicationServices\HumanitarianPublicationServices.csproj", "{3CF4AD39-A803-4B54-8534-25AE0275A5CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HumanitarianClientServices", "HumanitarianClientServices\HumanitarianClientServices.csproj", "{FAD9115C-EBCC-48AE-8241-7587BE182489}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +21,14 @@ Global
 		{62E5174B-0386-4F6B-AB89-86B1717C270F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62E5174B-0386-4F6B-AB89-86B1717C270F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{62E5174B-0386-4F6B-AB89-86B1717C270F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{3CF4AD39-A803-4B54-8534-25AE0275A5CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CF4AD39-A803-4B54-8534-25AE0275A5CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CF4AD39-A803-4B54-8534-25AE0275A5CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CF4AD39-A803-4B54-8534-25AE0275A5CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAD9115C-EBCC-48AE-8241-7587BE182489}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAD9115C-EBCC-48AE-8241-7587BE182489}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAD9115C-EBCC-48AE-8241-7587BE182489}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAD9115C-EBCC-48AE-8241-7587BE182489}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
