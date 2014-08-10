@@ -7,4 +7,25 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="[IX_EventXml]" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="9d03d44d-203d-43c5-abd2-fca9d49785e4" ChangeDateTime="08/10/2014 15:46:13">
+    <Property Name="ElementName" Value="[dbo].[Events].[EventXml]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Events]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="EventEvelopeXml" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="86255bba-9a47-44ff-a559-e0b5c791e39d" ChangeDateTime="08/10/2014 15:46:22">
+    <Property Name="ElementName" Value="[dbo].[Events].[EventEvelopeXml]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Events]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="EventEnvelopeXml" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="23aa71bf-eece-4aa6-8a14-c44fed6878ac" ChangeDateTime="08/10/2014 15:46:26">
+    <Property Name="ElementName" Value="[dbo].[Events].[PropertyXml]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Events]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="EventPropertyXml" />
+  </Operation>
 </Operations>

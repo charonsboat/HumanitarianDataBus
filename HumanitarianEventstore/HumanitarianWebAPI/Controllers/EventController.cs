@@ -17,7 +17,7 @@ namespace HumanitarianWebAPI.Controllers
         {
             var ctx = new HumanitarianEventContext();
 
-            return ctx.HumanitarianEvents.Select(x => x.EventXml).ToList();
+            return ctx.HumanitarianEvents.Select(x => x.EventEnvelopeXml).ToList();
         }
 
         // GET: api/Event/5

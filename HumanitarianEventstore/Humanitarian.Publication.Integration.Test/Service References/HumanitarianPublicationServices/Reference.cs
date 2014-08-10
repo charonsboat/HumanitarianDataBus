@@ -97,13 +97,19 @@ namespace Humanitarian.Publication.Integration.Test.HumanitarianPublicationServi
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EventXmlField;
+        private string EventEnvelopeXmlField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EventPropertyXmlField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Guid IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string PropertyXmlField;
+        private System.DateTime LastModifiedDateTimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LastModifiedUserField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -116,14 +122,27 @@ namespace Humanitarian.Publication.Integration.Test.HumanitarianPublicationServi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string EventXml {
+        public string EventEnvelopeXml {
             get {
-                return this.EventXmlField;
+                return this.EventEnvelopeXmlField;
             }
             set {
-                if ((object.ReferenceEquals(this.EventXmlField, value) != true)) {
-                    this.EventXmlField = value;
-                    this.RaisePropertyChanged("EventXml");
+                if ((object.ReferenceEquals(this.EventEnvelopeXmlField, value) != true)) {
+                    this.EventEnvelopeXmlField = value;
+                    this.RaisePropertyChanged("EventEnvelopeXml");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string EventPropertyXml {
+            get {
+                return this.EventPropertyXmlField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EventPropertyXmlField, value) != true)) {
+                    this.EventPropertyXmlField = value;
+                    this.RaisePropertyChanged("EventPropertyXml");
                 }
             }
         }
@@ -142,14 +161,27 @@ namespace Humanitarian.Publication.Integration.Test.HumanitarianPublicationServi
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PropertyXml {
+        public System.DateTime LastModifiedDateTime {
             get {
-                return this.PropertyXmlField;
+                return this.LastModifiedDateTimeField;
             }
             set {
-                if ((object.ReferenceEquals(this.PropertyXmlField, value) != true)) {
-                    this.PropertyXmlField = value;
-                    this.RaisePropertyChanged("PropertyXml");
+                if ((this.LastModifiedDateTimeField.Equals(value) != true)) {
+                    this.LastModifiedDateTimeField = value;
+                    this.RaisePropertyChanged("LastModifiedDateTime");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string LastModifiedUser {
+            get {
+                return this.LastModifiedUserField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LastModifiedUserField, value) != true)) {
+                    this.LastModifiedUserField = value;
+                    this.RaisePropertyChanged("LastModifiedUser");
                 }
             }
         }

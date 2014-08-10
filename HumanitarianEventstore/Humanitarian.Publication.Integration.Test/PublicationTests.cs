@@ -28,8 +28,8 @@ namespace Humanitarian.Publication.Integration.Test
                 client.AddHumanitarianEvent(new HumanitarianPublicationServices.AddHumanitarianEventRequest() 
                 { 
                     EventToAdd = new HumanitarianPublicationServices.HumanitarianEvent() 
-                        { EventXml = doc.ToString(),
-                        PropertyXml = "test"
+                        { EventEnvelopeXml = "envelope" ,
+                         EventPropertyXml = doc.ToString()
                         
                         } 
                 });

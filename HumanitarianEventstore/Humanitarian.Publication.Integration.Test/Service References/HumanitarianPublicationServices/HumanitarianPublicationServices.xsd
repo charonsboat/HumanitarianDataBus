@@ -9,9 +9,11 @@
   <xs:element name="ArrayOfHumanitarianEvent" nillable="true" type="tns:ArrayOfHumanitarianEvent" />
   <xs:complexType name="HumanitarianEvent">
     <xs:sequence>
-      <xs:element minOccurs="0" name="EventXml" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EventEnvelopeXml" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EventPropertyXml" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Id" type="ser:guid" />
-      <xs:element minOccurs="0" name="PropertyXml" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastModifiedDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LastModifiedUser" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="HumanitarianEvent" nillable="true" type="tns:HumanitarianEvent" />

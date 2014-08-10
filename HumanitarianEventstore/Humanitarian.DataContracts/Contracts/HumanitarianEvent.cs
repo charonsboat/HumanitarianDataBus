@@ -15,8 +15,8 @@ namespace Humanitarian.DataContracts
     public class HumanitarianEvent
     {
         private Guid id;
-        private string eventXml;
-        private string propertyXml;
+        private string eventEnvelopeXml;
+        private string eventPropertyXml;
         private DateTime lastModifiedDateTime;
         private string lastModifiedUser;
 
@@ -33,16 +33,16 @@ namespace Humanitarian.DataContracts
         }
 
         [DataMember]
-        public string EventXml
+        public string EventEnvelopeXml
         {
-            get { return eventXml; }
-            set { eventXml = value; }
+            get { return eventEnvelopeXml; }
+            set { eventEnvelopeXml = value; }
         }
         [DataMember]
-        public string PropertyXml
+        public string EventPropertyXml
         {
-            get { return propertyXml; }
-            set { propertyXml = value; }
+            get { return eventPropertyXml; }
+            set { eventPropertyXml = value; }
         }
 
         [DataMember]
