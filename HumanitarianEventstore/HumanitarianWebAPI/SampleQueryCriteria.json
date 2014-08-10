@@ -1,0 +1,19 @@
+﻿{
+    "CriteriaSet": [
+        {
+            "Type": "PointAndRadius",
+            "Criteria": [
+                { "lat_deg": 12.34 },
+                { "lon_deg": 12.34 },
+                { "radius": 12.34 }
+            ]
+        },
+        {
+            "Type": "TimeCode",
+            "Criteria": [
+                { "from_date": "2014-08-01T00:00:00Z" },
+                { "to_date": "2014-08-10T00:00:00Z" }
+            ]
+        }
+    ]
+}
