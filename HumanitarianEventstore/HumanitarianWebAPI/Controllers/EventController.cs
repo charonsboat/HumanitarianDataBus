@@ -4,15 +4,20 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using Humanitarian.DataAccess.Mapping;
+
 
 namespace HumanitarianWebAPI.Controllers
 {
+
     public class EventController : ApiController
     {
-        // GET: api/Event
+        // GET: api/Event --- Return *ALL* humanitarian events
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1", "value2" };
+            var ctx = new HumanitarianEventContext();
+
+            return ctx.HumanitarianEvents.Select(x => x.EventXml).ToList();
         }
 
         // GET: api/Event/5
