@@ -17,12 +17,14 @@ namespace Humanitarian.DataContracts
         private Guid id;
         private string eventXml;
         private string propertyXml;
+        private DateTime lastModifiedDateTime;
+        private string lastModifiedUser;
+
 
         public HumanitarianEvent()
         {
-
+            this.lastModifiedDateTime = DateTime.Now;
         }      
-
         [DataMember]
         public Guid Id
         {
@@ -41,6 +43,19 @@ namespace Humanitarian.DataContracts
         {
             get { return propertyXml; }
             set { propertyXml = value; }
+        }
+
+        [DataMember]
+        public DateTime LastModifiedDateTime
+        {
+            get { return this.lastModifiedDateTime;}
+            set { this.lastModifiedDateTime = value; }
+        }
+        [DataMember]
+        public string LastModifiedUser
+        {
+            get { return this.lastModifiedUser; }
+            set { this.lastModifiedUser = value; }
         }
 
     }

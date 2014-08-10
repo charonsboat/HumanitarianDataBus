@@ -18,6 +18,8 @@ namespace Humanitarian.DataAccess.Mapping
             this.ToTable("Events");
             this.Property(t => t.EventXml).HasColumnName("EventXml").HasColumnType("xml");
             this.Property(t => t.PropertyXml).HasColumnName("PropertyXml").HasColumnType("xml");
+            this.Property(t => t.LastModifiedDateTime).HasColumnName("LastModifiedDateTime").HasColumnType("datetime");
+            this.Property(t => t.LastModifiedUser).HasColumnName("LastModifiedUser").HasColumnType("varchar");
             this.Property(t => t.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
         }
 

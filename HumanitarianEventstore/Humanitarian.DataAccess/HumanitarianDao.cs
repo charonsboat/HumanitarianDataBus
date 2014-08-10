@@ -18,6 +18,8 @@ namespace Humanitarian.DataAccess
             using(var context = new HumanitarianEventContext())
             {
                 request.EventToAdd.Id = Guid.NewGuid();
+                request.EventToAdd.LastModifiedDateTime = DateTime.Now;
+                request.EventToAdd.LastModifiedUser = "API";
                 context.HumanitarianEvents.Add(request.EventToAdd);
                 context.SaveChanges();
             }

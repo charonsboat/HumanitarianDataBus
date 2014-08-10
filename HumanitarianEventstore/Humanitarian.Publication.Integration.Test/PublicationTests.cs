@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Linq;
 using System.Xml;
+using System.Xml.Schema;
+using System.IO;
 
 namespace Humanitarian.Publication.Integration.Test
 {
@@ -11,14 +13,22 @@ namespace Humanitarian.Publication.Integration.Test
     public class PublicationTests
     {
         [TestMethod]
+        [DeploymentItem(@"Schemas\HumanitarianEventSchema.xsd")]
+        [DeploymentItem(@"Schemas\HumanitarianEventSchema.xml")]
         public void AddNewEvent()
         {
+
+            //string filePath = Path.Combine(Directory.GetCurrentDirectory(), @"HumanitarianEventSchema.xsd");
+            XmlSchemaSet schemas = new XmlSchemaSet();
+            schemas.Add("http://www.w3.org/2001/XMLSchema", "HumanitarianEventSchema.xsd");
+            XDocument doc = XDocument.Load("HumanitarianEventSchema.xml", LoadOptions.SetBaseUri);
+                       
             using(var client = new HumanitarianPublicationServices.HumanitarianPublicationServicesClient())
             {
                 client.AddHumanitarianEvent(new HumanitarianPublicationServices.AddHumanitarianEventRequest() 
                 { 
                     EventToAdd = new HumanitarianPublicationServices.HumanitarianEvent() 
-                        { EventXml = "test",
+                        { EventXml = doc.ToString(),
                         PropertyXml = "test"
                         
                         } 
