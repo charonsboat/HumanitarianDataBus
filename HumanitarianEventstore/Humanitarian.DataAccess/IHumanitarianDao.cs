@@ -12,5 +12,6 @@ namespace Humanitarian.DataAccess
     {
         AddHumanitarianEventResponse AddHumanitarianEvent(AddHumanitarianEventRequest request);
         GetHumanitarianEventResponse GetHumanitarianEvents(GetHumanitarianEventRequest request);
+        GetHumanitarianEventResponse  GetHumanitarianEvent(GetHumanitarianEventRequest request);
     }
 }

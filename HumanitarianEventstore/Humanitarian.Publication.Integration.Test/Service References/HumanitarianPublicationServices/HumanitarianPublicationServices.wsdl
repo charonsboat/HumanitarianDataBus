@@ -5,8 +5,9 @@
       <xsd:import schemaLocation="http://localhost:54914/HumanitarianPublicationServices.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:54914/HumanitarianPublicationServices.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:54914/HumanitarianPublicationServices.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Humanitarian.DataContracts.Requests" />
-      <xsd:import schemaLocation="http://localhost:54914/HumanitarianPublicationServices.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Humanitarian.DataContracts.Responses" />
-      <xsd:import schemaLocation="http://localhost:54914/HumanitarianPublicationServices.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Humanitarian.DataContracts" />
+      <xsd:import schemaLocation="http://localhost:54914/HumanitarianPublicationServices.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:54914/HumanitarianPublicationServices.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Humanitarian.DataContracts.Responses" />
+      <xsd:import schemaLocation="http://localhost:54914/HumanitarianPublicationServices.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Humanitarian.DataContracts" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IHumanitarianPublicationServices_GetHumanitarianEvents_InputMessage">
@@ -14,6 +15,12 @@
   </wsdl:message>
   <wsdl:message name="IHumanitarianPublicationServices_GetHumanitarianEvents_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetHumanitarianEventsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHumanitarianPublicationServices_GetHumanitarianEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHumanitarianEvent" />
+  </wsdl:message>
+  <wsdl:message name="IHumanitarianPublicationServices_GetHumanitarianEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHumanitarianEventResponse" />
   </wsdl:message>
   <wsdl:message name="IHumanitarianPublicationServices_AddHumanitarianEvent_InputMessage">
     <wsdl:part name="parameters" element="tns:AddHumanitarianEvent" />
@@ -26,6 +33,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IHumanitarianPublicationServices/GetHumanitarianEvents" message="tns:IHumanitarianPublicationServices_GetHumanitarianEvents_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IHumanitarianPublicationServices/GetHumanitarianEventsResponse" message="tns:IHumanitarianPublicationServices_GetHumanitarianEvents_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="GetHumanitarianEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHumanitarianPublicationServices/GetHumanitarianEvent" message="tns:IHumanitarianPublicationServices_GetHumanitarianEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHumanitarianPublicationServices/GetHumanitarianEventResponse" message="tns:IHumanitarianPublicationServices_GetHumanitarianEvent_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="AddHumanitarianEvent">
       <wsdl:input wsaw:Action="http://tempuri.org/IHumanitarianPublicationServices/AddHumanitarianEvent" message="tns:IHumanitarianPublicationServices_AddHumanitarianEvent_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IHumanitarianPublicationServices/AddHumanitarianEventResponse" message="tns:IHumanitarianPublicationServices_AddHumanitarianEvent_OutputMessage" />
@@ -35,6 +46,15 @@
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="GetHumanitarianEvents">
       <soap:operation soapAction="http://tempuri.org/IHumanitarianPublicationServices/GetHumanitarianEvents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHumanitarianEvent">
+      <soap:operation soapAction="http://tempuri.org/IHumanitarianPublicationServices/GetHumanitarianEvent" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

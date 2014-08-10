@@ -22,6 +22,9 @@ namespace Humanitarian.Publication.Integration.Test.HumanitarianPublicationServi
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<System.Guid> IdsField;
+        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -29,6 +32,19 @@ namespace Humanitarian.Publication.Integration.Test.HumanitarianPublicationServi
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<System.Guid> Ids {
+            get {
+                return this.IdsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.IdsField, value) != true)) {
+                    this.IdsField = value;
+                    this.RaisePropertyChanged("Ids");
+                }
             }
         }
         
@@ -282,6 +298,12 @@ namespace Humanitarian.Publication.Integration.Test.HumanitarianPublicationServi
             "")]
         System.Threading.Tasks.Task<Humanitarian.Publication.Integration.Test.HumanitarianPublicationServices.GetHumanitarianEventResponse> GetHumanitarianEventsAsync(Humanitarian.Publication.Integration.Test.HumanitarianPublicationServices.GetHumanitarianEventRequest request);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IHumanitarianPublicationServices/GetHumanitarianEvent", ReplyAction="http://tempuri.org/IHumanitarianPublicationServices/GetHumanitarianEventResponse")]
+        Humanitarian.Publication.Integration.Test.HumanitarianPublicationServices.GetHumanitarianEventResponse GetHumanitarianEvent(Humanitarian.Publication.Integration.Test.HumanitarianPublicationServices.GetHumanitarianEventRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IHumanitarianPublicationServices/GetHumanitarianEvent", ReplyAction="http://tempuri.org/IHumanitarianPublicationServices/GetHumanitarianEventResponse")]
+        System.Threading.Tasks.Task<Humanitarian.Publication.Integration.Test.HumanitarianPublicationServices.GetHumanitarianEventResponse> GetHumanitarianEventAsync(Humanitarian.Publication.Integration.Test.HumanitarianPublicationServices.GetHumanitarianEventRequest request);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IHumanitarianPublicationServices/AddHumanitarianEvent", ReplyAction="http://tempuri.org/IHumanitarianPublicationServices/AddHumanitarianEventResponse")]
         Humanitarian.Publication.Integration.Test.HumanitarianPublicationServices.AddHumanitarianEventResponse AddHumanitarianEvent(Humanitarian.Publication.Integration.Test.HumanitarianPublicationServices.AddHumanitarianEventRequest request);
         
@@ -322,6 +344,14 @@ namespace Humanitarian.Publication.Integration.Test.HumanitarianPublicationServi
         
         public System.Threading.Tasks.Task<Humanitarian.Publication.Integration.Test.HumanitarianPublicationServices.GetHumanitarianEventResponse> GetHumanitarianEventsAsync(Humanitarian.Publication.Integration.Test.HumanitarianPublicationServices.GetHumanitarianEventRequest request) {
             return base.Channel.GetHumanitarianEventsAsync(request);
+        }
+        
+        public Humanitarian.Publication.Integration.Test.HumanitarianPublicationServices.GetHumanitarianEventResponse GetHumanitarianEvent(Humanitarian.Publication.Integration.Test.HumanitarianPublicationServices.GetHumanitarianEventRequest request) {
+            return base.Channel.GetHumanitarianEvent(request);
+        }
+        
+        public System.Threading.Tasks.Task<Humanitarian.Publication.Integration.Test.HumanitarianPublicationServices.GetHumanitarianEventResponse> GetHumanitarianEventAsync(Humanitarian.Publication.Integration.Test.HumanitarianPublicationServices.GetHumanitarianEventRequest request) {
+            return base.Channel.GetHumanitarianEventAsync(request);
         }
         
         public Humanitarian.Publication.Integration.Test.HumanitarianPublicationServices.AddHumanitarianEventResponse AddHumanitarianEvent(Humanitarian.Publication.Integration.Test.HumanitarianPublicationServices.AddHumanitarianEventRequest request) {
