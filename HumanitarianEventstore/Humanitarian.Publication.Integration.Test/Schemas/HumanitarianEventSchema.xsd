@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Created with Liquid XML 2014 Developer Bundle Edition 12.2.3.5240 (http://www.liquid-technologies.com) -->
-<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.humanitariantoolbox.com/HumanitarianEventSchema/1/0/0/0/">
   <xs:element name="HumanitarianEvent">
     <xs:complexType>
       <xs:sequence>

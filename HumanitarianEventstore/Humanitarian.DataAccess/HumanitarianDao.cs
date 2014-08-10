@@ -2,10 +2,7 @@
 using Humanitarian.DataContracts.Requests;
 using Humanitarian.DataContracts.Responses;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Humanitarian.DataAccess
 {
@@ -34,6 +31,18 @@ namespace Humanitarian.DataAccess
             {
                 response.Events = (from c in context.HumanitarianEvents
                                   select c).ToList();
+            }
+            return response;
+
+        }
+        public GetHumanitarianEventResponse GetHumanitarianEvent(GetHumanitarianEventRequest request)
+        {
+            var response = new GetHumanitarianEventResponse();
+            using (var context = new HumanitarianEventContext())
+            {
+                response.Events = (from c in context.HumanitarianEvents
+                                   where request.Ids.Contains(c.Id)
+                                   select c).ToList();
             }
             return response;
 

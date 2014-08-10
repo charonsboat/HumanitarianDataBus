@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<HumanitarianEvent>
+<HumanitarianEvent xmlns:xsi="http://schemas.humanitariantoolbox.com/HumanitarianEventSchema/1/0/0/0/instance" xmlns:xsd="http://schemas.humanitariantoolbox.com/HumanitarianEventSchema/1/0/0/0/">
     <report>
         <report_date></report_date>
             <from_date></from_date>

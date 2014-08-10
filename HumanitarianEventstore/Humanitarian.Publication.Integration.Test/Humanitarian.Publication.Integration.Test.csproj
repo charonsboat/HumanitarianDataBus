@@ -69,6 +69,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="XmlHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
@@ -76,7 +77,14 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+    <Content Include="Schemas\HumanitarianEventProperty.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Schemas\HumanitarianEventSchema.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schemas\HumanitarianEventProperty.xsd">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -110,6 +118,9 @@
     <None Include="Service References\HumanitarianPublicationServices\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Service References\HumanitarianPublicationServices\HumanitarianPublicationServices5.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\HumanitarianPublicationServices\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
