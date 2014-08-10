@@ -23,11 +23,11 @@ namespace Humanitarian.Publication.Integration.Test
             XmlSchemaSet schemas = new XmlSchemaSet();
             
             //Load schema from deployment item
-            schemas.Add("http://www.w3.org/2001/XMLSchema", "HumanitarianEventSchema.xsd");
+            schemas.Add("http://schemas.humanitariantoolbox.com/HumanitarianEventSchema/1/0/0/0/", "HumanitarianEventSchema.xsd");
 
             //load XML from deployment item
            var doc = XDocument.Load("HumanitarianEventSchema.xml", LoadOptions.SetBaseUri);
-           doc.Root.SetDefaultXmlNamespace("http://www.w3.org/2001/XMLSchema");
+           doc.Root.SetDefaultXmlNamespace("http://schemas.humanitariantoolbox.com/HumanitarianEventSchema/1/0/0/0/");
 
             // Valid according to the schema
             doc.Validate(schemas, null, true);
@@ -81,7 +81,7 @@ namespace Humanitarian.Publication.Integration.Test
                 var request = new HumanitarianPublicationServices.GetHumanitarianEventRequest() 
                 { 
                     Ids = new List<Guid>()
-                    {Guid.Parse("D113941E-19A9-44B7-97E3-D406AE447ADF") 
+                    {Guid.Parse("A7A86B6D-2CEC-4422-8824-5C154EAE6BC7") 
                     } 
                 };
 
@@ -99,8 +99,8 @@ namespace Humanitarian.Publication.Integration.Test
                  var request = new HumanitarianPublicationServices.GetHumanitarianEventRequest()
                  {
                      Ids = new List<Guid>()
-                    {Guid.Parse("D113941E-19A9-44B7-97E3-D406AE447ADF"),
-                     Guid.Parse("77BA5712-6264-4864-93B4-EBC5965C5F26")  
+                    {Guid.Parse("A7A86B6D-2CEC-4422-8824-5C154EAE6BC7"),
+                     Guid.Parse("34B6798B-82E8-47E5-8F67-C750B529C6A5")  
                     }
                  };
 
