@@ -1,0 +1,16 @@
+﻿{
+    "CriteriaSet": [
+        {
+            "Type": "PointAndRadius",
+            "Criteria": [
+                {
+                    "Position": [
+                        { "Latitude": 12.34 },
+                        { "Longitude": 12.34 }
+                    ]
+                },
+                { "Radius": 12.34 }
+            ]
+        }
+    ]
+}
