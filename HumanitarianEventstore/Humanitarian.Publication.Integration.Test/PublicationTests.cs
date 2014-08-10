@@ -73,7 +73,7 @@ namespace Humanitarian.Publication.Integration.Test
         }  
       
          [TestMethod]
-        public void GetEvent()
+        public void GetSingleEvent()
         {
             var humEvents = new List<HumanitarianPublicationServices.HumanitarianEvent>();
             using (var client = new HumanitarianPublicationServices.HumanitarianPublicationServicesClient())
@@ -89,6 +89,25 @@ namespace Humanitarian.Publication.Integration.Test
               humEvents = response.Events;
             }
             Assert.IsTrue(humEvents.Count == 1);
-        }        
+        }
+         [TestMethod]
+         public void GetMultipleEvent()
+         {
+             var humEvents = new List<HumanitarianPublicationServices.HumanitarianEvent>();
+             using (var client = new HumanitarianPublicationServices.HumanitarianPublicationServicesClient())
+             {
+                 var request = new HumanitarianPublicationServices.GetHumanitarianEventRequest()
+                 {
+                     Ids = new List<Guid>()
+                    {Guid.Parse("D113941E-19A9-44B7-97E3-D406AE447ADF"),
+                     Guid.Parse("77BA5712-6264-4864-93B4-EBC5965C5F26")  
+                    }
+                 };
+
+                 var response = client.GetHumanitarianEvent(request);
+                 humEvents = response.Events;
+             }
+             Assert.IsTrue(humEvents.Count ==2);
+         }  
     }    
 }
