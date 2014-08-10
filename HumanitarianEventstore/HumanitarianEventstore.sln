@@ -20,6 +20,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Humanitarian.Publication.Unit.Tests", "Humanitarian.Publication.Unit.Tests\Humanitarian.Publication.Unit.Tests.csproj", "{9E75681A-9ABE-4D3A-AA20-2D5D709E7479}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Humanitarian.Publication.Integration.Test", "Humanitarian.Publication.Integration.Test\Humanitarian.Publication.Integration.Test.csproj", "{5FD079CE-F656-4BBE-8FBD-2F17B1C62FCB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C04E0F64-104B-4F55-A7FB-BD6BF64E5A1D} = {C04E0F64-104B-4F55-A7FB-BD6BF64E5A1D}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Humanitarian.Client.DataServices", "Humanitarian.Client.DataServices\Humanitarian.Client.DataServices.csproj", "{10D463D6-1228-45A0-9986-52E19E51D13F}"
 EndProject
@@ -36,6 +39,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HumanitarianWebAPI", "HumanitarianWebAPI\HumanitarianWebAPI.csproj", "{EB9BB5B5-33FE-4C70-9A12-A22B742CBF5F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Humanitarian.PublicationServices", "Humanitarian.PublicationServices\Humanitarian.PublicationServices.csproj", "{C04E0F64-104B-4F55-A7FB-BD6BF64E5A1D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Docs", "_Docs", "{EF92CE66-BCBC-457A-AAF6-58EDE9A815C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

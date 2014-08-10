@@ -39,7 +39,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -73,6 +81,7 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -84,6 +93,10 @@
     <ProjectReference Include="..\Humanitarian.Common\Humanitarian.Common.csproj">
       <Project>{193c95ee-211d-4479-99d1-cd298a5ef92a}</Project>
       <Name>Humanitarian.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Humanitarian.DataAccess\Humanitarian.DataAccess.csproj">
+      <Project>{ba2c58ac-8555-4f0a-8762-fc56ae0e5649}</Project>
+      <Name>Humanitarian.DataAccess</Name>
     </ProjectReference>
     <ProjectReference Include="..\Humanitarian.DataContracts\Humanitarian.DataContracts.csproj">
       <Project>{09e492ba-7418-416b-a1c9-f1dae074c0f5}</Project>
