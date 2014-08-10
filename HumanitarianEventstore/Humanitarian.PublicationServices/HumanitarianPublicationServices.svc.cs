@@ -21,6 +21,11 @@ namespace Humanitarian.PublicationServices
             var dao = new HumanitarianDao();
             return dao.GetHumanitarianEvents(request);
         }
+        public GetHumanitarianEventResponse GetHumanitarianEvent(GetHumanitarianEventRequest request)
+        {
+            var dao = new HumanitarianDao();
+            return dao.GetHumanitarianEvent(request);
+        }
 
         public AddHumanitarianEventResponse AddHumanitarianEvent(AddHumanitarianEventRequest request)
         {

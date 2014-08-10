@@ -70,6 +70,25 @@ namespace Humanitarian.Publication.Integration.Test
               humEvents = response.Events;
             }
             Assert.IsTrue(humEvents.Any());
+        }  
+      
+         [TestMethod]
+        public void GetEvent()
+        {
+            var humEvents = new List<HumanitarianPublicationServices.HumanitarianEvent>();
+            using (var client = new HumanitarianPublicationServices.HumanitarianPublicationServicesClient())
+            {
+                var request = new HumanitarianPublicationServices.GetHumanitarianEventRequest() 
+                { 
+                    Ids = new List<Guid>()
+                    {Guid.Parse("D113941E-19A9-44B7-97E3-D406AE447ADF") 
+                    } 
+                };
+
+              var response =  client.GetHumanitarianEvent(request);
+              humEvents = response.Events;
+            }
+            Assert.IsTrue(humEvents.Count == 1);
         }        
-    }
+    }    
 }

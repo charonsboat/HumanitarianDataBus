@@ -30,6 +30,7 @@
     <MetadataFile FileName="HumanitarianPublicationServices3.xsd" MetadataType="Schema" ID="1bf03fc7-6124-4928-85c3-1e41b16d4373" SourceId="1" SourceUrl="http://localhost:54914/HumanitarianPublicationServices.svc?xsd=xsd1" />
     <MetadataFile FileName="HumanitarianPublicationServices.disco" MetadataType="Disco" ID="9bba2124-b29e-4100-a90e-34e1abd24ea9" SourceId="1" SourceUrl="http://localhost:54914/HumanitarianPublicationServices.svc?disco" />
     <MetadataFile FileName="HumanitarianPublicationServices4.xsd" MetadataType="Schema" ID="80418c30-8018-417b-bd83-e897fe1cf35f" SourceId="1" SourceUrl="http://localhost:54914/HumanitarianPublicationServices.svc?xsd=xsd2" />
+    <MetadataFile FileName="HumanitarianPublicationServices5.xsd" MetadataType="Schema" ID="769cf2a0-5f41-4516-89fe-6c8537265dc1" SourceId="1" SourceUrl="http://localhost:54914/HumanitarianPublicationServices.svc?xsd=xsd5" />
     <MetadataFile FileName="HumanitarianPublicationServices.wsdl" MetadataType="Wsdl" ID="2c765a33-8b5c-494c-bd07-84d41baa61b9" SourceId="1" SourceUrl="http://localhost:54914/HumanitarianPublicationServices.svc?wsdl" />
   </Metadata>
   <Extensions>
