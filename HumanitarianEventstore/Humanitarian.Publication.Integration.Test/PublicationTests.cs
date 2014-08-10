@@ -6,6 +6,7 @@ using System.Xml.Linq;
 using System.Xml;
 using System.Xml.Schema;
 using System.IO;
+using System.Text;
 
 namespace Humanitarian.Publication.Integration.Test
 {
@@ -20,8 +21,31 @@ namespace Humanitarian.Publication.Integration.Test
 
             //string filePath = Path.Combine(Directory.GetCurrentDirectory(), @"HumanitarianEventSchema.xsd");
             XmlSchemaSet schemas = new XmlSchemaSet();
+            
+            //Load schema from deployment item
             schemas.Add("http://www.w3.org/2001/XMLSchema", "HumanitarianEventSchema.xsd");
-            XDocument doc = XDocument.Load("HumanitarianEventSchema.xml", LoadOptions.SetBaseUri);
+
+            //load XML from deployment item
+           var doc = XDocument.Load("HumanitarianEventSchema.xml", LoadOptions.SetBaseUri);
+           doc.Root.SetDefaultXmlNamespace("http://www.w3.org/2001/XMLSchema");
+
+            // Valid according to the schema
+            doc.Validate(schemas, null, true);
+
+            //Create XML with schema defintion
+            var sb = new StringBuilder();
+            var xws = new XmlWriterSettings();
+
+            xws.OmitXmlDeclaration = true;
+            xws.Indent = true;
+            xws.WriteEndDocumentOnClose = true;
+            
+            
+            using (var xw = XmlWriter.Create(sb, xws))
+            {   
+               doc.WriteTo(xw);
+            }
+
                        
             using(var client = new HumanitarianPublicationServices.HumanitarianPublicationServicesClient())
             {
@@ -29,7 +53,7 @@ namespace Humanitarian.Publication.Integration.Test
                 { 
                     EventToAdd = new HumanitarianPublicationServices.HumanitarianEvent() 
                         { EventEnvelopeXml = "envelope" ,
-                         EventPropertyXml = doc.ToString()
+                         EventPropertyXml = sb.ToString()
                         
                         } 
                 });
@@ -46,6 +70,6 @@ namespace Humanitarian.Publication.Integration.Test
               humEvents = response.Events;
             }
             Assert.IsTrue(humEvents.Any());
-        }
+        }        
     }
 }
