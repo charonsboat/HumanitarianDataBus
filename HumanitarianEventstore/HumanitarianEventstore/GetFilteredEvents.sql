@@ -1,11 +1,19 @@
 ﻿
+/****** Object:  StoredProcedure [dbo].[GetFilteredEvents]    Script Date: 8/10/2014 4:52:04 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
 -- =============================================
 -- Author:		William A. Homer, codeOkla.com
 -- Create date: 20140810
 -- Description:	Returns All records from dbo.Events based on supplied criteria
 -- =============================================
-CREATE PROCEDURE dbo.GetFilteredEvents
-	@CriteriaList nvarchar(MAX)		-- comma delimited key:value pairings (key1:value1,key2:value2,key3:value3)
+CREATE PROCEDURE [dbo].[GetFilteredEvents]
+	@CriteriaList nvarchar(MAX)	= null	-- comma delimited key:value pairings (key1:value1,key2:value2,key3:value3)
+	,@ParameterCriteriaList nvarchar(MAX) = null
 AS
 BEGIN
 
@@ -331,7 +339,35 @@ BEGIN
 	SET @ctr = @ctr + 1
 END
 
+
+-- FUTURE CODE
+-- Now handle Property criteria
+
+--DECLARE @tblParameterCriteria table (rownum int identity(1,1), criteria varchar(150))
+--INSERT INTO @tblParameterCritera (criteria) SELECT * FROM dbo.fn_ParseParametersStripSpace(@ParameterCriteriaList,',')
+--DECLARE @PMaxCount int = (SELECT MAX(rownum) FROM @tblParameterCritera)
+
+
+--WHILE @ctr < @PMaxCount + 1
+--BEGIN
+--	IF (select top(1) Parameter FROM dbo.fn_ParseParametersStripSpace((SELECT criteria FROM @tblParameterCritera WHERE rownum = @ctr), ':') ) = 'lat_deg'  
+--		BEGIN
+--			IF @AndKeeper = 1 
+--				BEGIN
+--					SET @sql = @sql + ' AND EventEnvelopeXml.value(''declare namespace xsd="http://schemas.humanitariantoolbox.com/HumanitarianEventSchema/1/0/0/0/"; '
+--					SET @AndKeeper = 0
+--				END
+--			SET @sql = @sql + 
+--				'(/xsd:EventPropertyXML/xsd:PropertyCategories/xsd:PropertyCategory/xsd:CatProperty/xsd:PropName/xsd:lat_deg)[1]'', ''nvarchar(50)'') = ' + 
+--				(select top(1) Parameter FROM dbo.fn_ParseParametersStripSpace((SELECT criteria FROM @tblCriteria WHERE rownum = @ctr), ':')  WHERE NOT Parameter like 'lat_deg' )
+--			SET @AndKeeper = 1
+--		END
+--END
+
 EXECUTE (@sql)
 
 END
+
 GO
+
+
