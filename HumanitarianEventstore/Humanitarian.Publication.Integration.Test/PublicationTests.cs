@@ -52,8 +52,8 @@ namespace Humanitarian.Publication.Integration.Test
                 client.AddHumanitarianEvent(new HumanitarianPublicationServices.AddHumanitarianEventRequest() 
                 { 
                     EventToAdd = new HumanitarianPublicationServices.HumanitarianEvent() 
-                        { EventEnvelopeXml = "envelope" ,
-                         EventPropertyXml = sb.ToString()
+                        { EventEnvelopeXml = sb.ToString(),
+                         EventPropertyXml = "property"
                         
                         } 
                 });
