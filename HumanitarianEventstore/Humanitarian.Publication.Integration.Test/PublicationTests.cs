@@ -16,18 +16,38 @@ namespace Humanitarian.Publication.Integration.Test
         [TestMethod]
         [DeploymentItem(@"Schemas\HumanitarianEventSchema.xsd")]
         [DeploymentItem(@"Schemas\HumanitarianEventSchema.xml")]
+        [DeploymentItem(@"Schemas\HumanitarianEventProperty.xsd")]
+        [DeploymentItem(@"Schemas\HumanitarianEventProperty.xml")]
         public void AddNewEvent()
         {
 
+            var ex = CreateEventXml();
+            var px = CreatePropertyXml();
+
+                       
+            using(var client = new HumanitarianPublicationServices.HumanitarianPublicationServicesClient())
+            {
+                client.AddHumanitarianEvent(new HumanitarianPublicationServices.AddHumanitarianEventRequest() 
+                { 
+                    EventToAdd = new HumanitarianPublicationServices.HumanitarianEvent() 
+                        { EventEnvelopeXml = ex.ToString(),
+                         EventPropertyXml = px.ToString()                        
+                        } 
+                });
+            }            
+        }
+
+        private static StringBuilder CreatePropertyXml()
+        {
             //string filePath = Path.Combine(Directory.GetCurrentDirectory(), @"HumanitarianEventSchema.xsd");
             XmlSchemaSet schemas = new XmlSchemaSet();
-            
+
             //Load schema from deployment item
-            schemas.Add("http://schemas.humanitariantoolbox.com/HumanitarianEventSchema/1/0/0/0/", "HumanitarianEventSchema.xsd");
+            schemas.Add("http://schemas.humanitariantoolbox.com/HumanitarianPropertySchema/1/0/0/0/", "HumanitarianEventProperty.xsd");
 
             //load XML from deployment item
-           var doc = XDocument.Load("HumanitarianEventSchema.xml", LoadOptions.SetBaseUri);
-           doc.Root.SetDefaultXmlNamespace("http://schemas.humanitariantoolbox.com/HumanitarianEventSchema/1/0/0/0/");
+            var doc = XDocument.Load("HumanitarianEventProperty.xml", LoadOptions.SetBaseUri);
+            doc.Root.SetDefaultXmlNamespace("http://schemas.humanitariantoolbox.com/HumanitarianPropertySchema/1/0/0/0/");
 
             // Valid according to the schema
             doc.Validate(schemas, null, true);
@@ -39,25 +59,42 @@ namespace Humanitarian.Publication.Integration.Test
             xws.OmitXmlDeclaration = true;
             xws.Indent = true;
             xws.WriteEndDocumentOnClose = true;
-            
-            
-            using (var xw = XmlWriter.Create(sb, xws))
-            {   
-               doc.WriteTo(xw);
-            }
 
-                       
-            using(var client = new HumanitarianPublicationServices.HumanitarianPublicationServicesClient())
+            using (var xw = XmlWriter.Create(sb, xws))
             {
-                client.AddHumanitarianEvent(new HumanitarianPublicationServices.AddHumanitarianEventRequest() 
-                { 
-                    EventToAdd = new HumanitarianPublicationServices.HumanitarianEvent() 
-                        { EventEnvelopeXml = sb.ToString(),
-                         EventPropertyXml = "property"
-                        
-                        } 
-                });
-            }            
+                doc.WriteTo(xw);
+            }
+            return sb;
+        }
+
+        private static StringBuilder CreateEventXml()
+        {
+            //string filePath = Path.Combine(Directory.GetCurrentDirectory(), @"HumanitarianEventSchema.xsd");
+            XmlSchemaSet schemas = new XmlSchemaSet();
+
+            //Load schema from deployment item
+            schemas.Add("http://schemas.humanitariantoolbox.com/HumanitarianEventSchema/1/0/0/0/", "HumanitarianEventSchema.xsd");
+
+            //load XML from deployment item
+            var doc = XDocument.Load("HumanitarianEventSchema.xml", LoadOptions.SetBaseUri);
+            doc.Root.SetDefaultXmlNamespace("http://schemas.humanitariantoolbox.com/HumanitarianEventSchema/1/0/0/0/");
+
+            // Valid according to the schema
+            doc.Validate(schemas, null, true);
+
+            //Create XML with schema defintion
+            var sb = new StringBuilder();
+            var xws = new XmlWriterSettings();
+
+            xws.OmitXmlDeclaration = true;
+            xws.Indent = true;
+            xws.WriteEndDocumentOnClose = true;
+
+            using (var xw = XmlWriter.Create(sb, xws))
+            {
+                doc.WriteTo(xw);
+            }
+            return sb;
         }
 
         [TestMethod]

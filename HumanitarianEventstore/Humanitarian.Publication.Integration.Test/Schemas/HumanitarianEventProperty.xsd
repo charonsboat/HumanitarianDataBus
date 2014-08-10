@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema attributeFormDefault="unqualified"
+           elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://schemas.humanitariantoolbox.com/HumanitarianPropertySchema/1/0/0/0/">
+    <xs:element name="EventPropertyXML">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="PropertyCategories"
+                            minOccurs="0">
+                    <xs:complexType>
+                        <xs:choice>
+                            <xs:element name="PropertyCategory"
+                                        minOccurs="0"
+                                        maxOccurs="4">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="CategoryName"
+                                                    type="xs:string"
+                                                    minOccurs="0" />
+                                        <xs:element name="CatProperty"
+                                                    minOccurs="0"
+                                                    maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="PropName"
+                                                                type="xs:string"
+                                                                minOccurs="0" />
+                                                    <xs:element name="PropValue"
+                                                                type="xs:string"
+                                                                minOccurs="0" />
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:choice>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
