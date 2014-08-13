@@ -62,7 +62,10 @@
   <ItemGroup>
     <Build Include="Tables\Events.sql" />
     <Build Include="GetFilteredEvents.sql" />
-    <Build Include="fn_ParseParametersStripSpace.sql" />
+    <Build Include="fn_ParseParametersStripSpace.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
   </ItemGroup>
   <ItemGroup>
     <None Include="HumanitarianEventstore.publish.xml" />

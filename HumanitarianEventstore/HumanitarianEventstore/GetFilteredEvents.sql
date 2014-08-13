@@ -1,10 +1,5 @@
 ﻿
 /****** Object:  StoredProcedure [dbo].[GetFilteredEvents]    Script Date: 8/10/2014 4:52:04 PM ******/
-SET ANSI_NULLS ON
-GO
-
-SET QUOTED_IDENTIFIER ON
-GO
 
 -- =============================================
 -- Author:		William A. Homer, codeOkla.com
