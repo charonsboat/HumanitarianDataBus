@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Humanitarian.Eventstore", "HumanitarianEventstore\Humanitarian.Eventstore.sqlproj", "{62E5174B-0386-4F6B-AB89-86B1717C270F}"
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Humanitarian.Eventstore", "Humanitarian.Eventstore\Humanitarian.Eventstore.sqlproj", "{62E5174B-0386-4F6B-AB89-86B1717C270F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hosts", "Hosts", "{0E743E40-7F8F-4C06-9772-295D547C824C}"
 EndProject
