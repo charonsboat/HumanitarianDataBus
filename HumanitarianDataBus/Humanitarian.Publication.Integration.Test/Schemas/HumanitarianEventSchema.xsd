@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.humanitariantoolbox.com/HumanitarianEventSchema/1/0/0/0/">
+  <xs:element name="HumanitarianEvent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="report">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="report_date" />
+              <xs:element minOccurs="0" name="from_date" />
+              <xs:element minOccurs="0" name="to_date" />
+              <xs:element minOccurs="0" name="period_date" />
+              <xs:element minOccurs="0" name="source_id" />
+              <xs:element minOccurs="0" name="method_id" />
+              <xs:element minOccurs="0" name="method_lnk" />
+              <xs:element minOccurs="0" name="datatype_id" />
+              <xs:element minOccurs="0" name="crisis_id" />
+              <xs:element minOccurs="0" name="crisis_lnk" />
+              <xs:element minOccurs="0" name="data_lnk" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="Location">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="loc_id" />
+              <xs:element minOccurs="0" name="loctype_id" />
+              <xs:element minOccurs="0" name="country_id" />
+              <xs:element minOccurs="0" name="region_id" />
+              <xs:element minOccurs="0" name="adm1_id" />
+              <xs:element minOccurs="0" name="adm2_id" />
+              <xs:element minOccurs="0" name="adm3_id" />
+              <xs:element minOccurs="0" name="adm4_id" />
+              <xs:element minOccurs="0" name="adm5_id" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="Geocode">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="lat_deg" />
+              <xs:element minOccurs="0" name="lon_deg" />
+              <xs:element minOccurs="0" name="radius" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="Demographics">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="sex_id" />
+              <xs:element minOccurs="0" name="age_id" />
+              <xs:element minOccurs="0" name="agesex_id" />
+              <xs:element minOccurs="0" name="people_num" />
+              <xs:element minOccurs="0" name="households_num" />
+              <xs:element minOccurs="0" name="females_num" />
+              <xs:element minOccurs="0" name="males_num" />
+              <xs:element minOccurs="0" name="origin_id" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="impacts">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="aff_num" />
+              <xs:element minOccurs="0" name="impact1_id" />
+              <xs:element minOccurs="0" name="impact2_id" />
+              <xs:element minOccurs="0" name="impact3_id" />
+              <xs:element minOccurs="0" name="shelter1_id" />
+              <xs:element minOccurs="0" name="shelter2_id" />
+              <xs:element minOccurs="0" name="inneed_num" />
+              <xs:element minOccurs="0" name="targeted_num" />
+              <xs:element minOccurs="0" name="reached_num" />
+              <xs:element minOccurs="0" name="injured_num" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="Activities">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="activity_id" />
+              <xs:element minOccurs="0" name="status_id" />
+              <xs:element minOccurs="0" name="name" />
+              <xs:element minOccurs="0" name="email" />
+              <xs:element minOccurs="0" name="phone" />
+              <xs:element minOccurs="0" name="org_id" />
+              <xs:element minOccurs="0" name="prog_id" />
+              <xs:element minOccurs="0" name="impl_id" />
+              <xs:element minOccurs="0" name="funder_id" />
+              <xs:element minOccurs="0" name="sector_id" />
+              <xs:element minOccurs="0" name="subsector_id" />
+              <xs:element minOccurs="0" name="output_id" />
+              <xs:element minOccurs="0" name="beneficiary_id" />
+              <xs:element minOccurs="0" name="delivered_num" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

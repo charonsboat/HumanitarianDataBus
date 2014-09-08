@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c27d3713-15cc-443a-b814-4d0bcf2db62a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:54914/HumanitarianPublicationServices.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="HumanitarianPublicationServices.xsd" MetadataType="Schema" ID="29e56994-5659-4d15-a2a0-b7aaf7130c64" SourceId="1" SourceUrl="http://localhost:54914/HumanitarianPublicationServices.svc?xsd=xsd4" />
+    <MetadataFile FileName="HumanitarianPublicationServices1.xsd" MetadataType="Schema" ID="64e48893-1539-4643-9da3-dc9bfd6383a0" SourceId="1" SourceUrl="http://localhost:54914/HumanitarianPublicationServices.svc?xsd=xsd0" />
+    <MetadataFile FileName="HumanitarianPublicationServices2.xsd" MetadataType="Schema" ID="0f5d4d6e-2cf7-4fe0-b96d-e0584cb819ff" SourceId="1" SourceUrl="http://localhost:54914/HumanitarianPublicationServices.svc?xsd=xsd3" />
+    <MetadataFile FileName="HumanitarianPublicationServices3.xsd" MetadataType="Schema" ID="1bf03fc7-6124-4928-85c3-1e41b16d4373" SourceId="1" SourceUrl="http://localhost:54914/HumanitarianPublicationServices.svc?xsd=xsd1" />
+    <MetadataFile FileName="HumanitarianPublicationServices.disco" MetadataType="Disco" ID="9bba2124-b29e-4100-a90e-34e1abd24ea9" SourceId="1" SourceUrl="http://localhost:54914/HumanitarianPublicationServices.svc?disco" />
+    <MetadataFile FileName="HumanitarianPublicationServices4.xsd" MetadataType="Schema" ID="80418c30-8018-417b-bd83-e897fe1cf35f" SourceId="1" SourceUrl="http://localhost:54914/HumanitarianPublicationServices.svc?xsd=xsd2" />
+    <MetadataFile FileName="HumanitarianPublicationServices5.xsd" MetadataType="Schema" ID="769cf2a0-5f41-4516-89fe-6c8537265dc1" SourceId="1" SourceUrl="http://localhost:54914/HumanitarianPublicationServices.svc?xsd=xsd5" />
+    <MetadataFile FileName="HumanitarianPublicationServices.wsdl" MetadataType="Wsdl" ID="2c765a33-8b5c-494c-bd07-84d41baa61b9" SourceId="1" SourceUrl="http://localhost:54914/HumanitarianPublicationServices.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
