@@ -28,21 +28,20 @@ namespace Humanitarian.DataContracts
         [DataMember]
         public Guid Id
         {
-            get { return id; }
-            set { id = value; }
+            get { return this.id; }
+            set { this.id = value; }
         }
-
         [DataMember]
         public string EventEnvelopeXml
         {
-            get { return eventEnvelopeXml; }
-            set { eventEnvelopeXml = value; }
+            get { return this.eventEnvelopeXml; }
+            set { this.eventEnvelopeXml = value; }
         }
         [DataMember]
         public string EventPropertyXml
         {
-            get { return eventPropertyXml; }
-            set { eventPropertyXml = value; }
+            get { return this.eventPropertyXml; }
+            set { this.eventPropertyXml = value; }
         }
 
         [DataMember]
